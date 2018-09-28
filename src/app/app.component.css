@@ -22,6 +22,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -41,4 +42,55 @@ blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.bg-pergunta{
+    
+    color: white;    
+    background-image:url(/assets/Slide1.JPG);
+    position:fixed;
+    height: 100%;
+    width: 100%;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+.verdadeiro-container{
+    display: flex;
+    position: absolute;
+    height: 4.9%;
+    width: 38.50%;    
+    top: 61%;
+    left: 36.7%;
+    align-items: center;
+}
+.falso-container{
+    align-items: center;
+    position: absolute;
+    display: flex;
+    height: 4.9%;
+    width: 38.5%;
+    top: 74.1%;
+    left: 36.7%;
+}
+.verdadeiro{
+    margin-right:15px;
+    background-color: #ea6b02;
+	border-radius: 12px;
+    height: 100%;
+    width: 0%;
+}
+.falso{
+    margin-right:15px;
+    background-color: #cbd000;
+    border-radius: 12px;
+    height: 100%;
+    width: 1%;  
+}
+.valor{
+    font-size:210%;
+	top:1%;
 }

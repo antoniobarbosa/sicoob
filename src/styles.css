@@ -22,13 +22,21 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	
 }
+	@font-face {
+	font-family: ApollineRegular;
+    src: url(/assets/ApollineRegular.otf);
+};
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
+	font-family: Myriad Pro;
 	line-height: 1;
 }
 ol, ul {

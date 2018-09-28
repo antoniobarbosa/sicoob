@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js'
 import { SunvoteServiceService } from '../sunvote-service.service';
+import { SocketService } from '../socket.service';
 
 @Component({
   selector: 'app-perguntas',
@@ -17,15 +18,18 @@ export class PerguntasComponent implements OnInit {
   verdadeiroSize = '50%';
   falsoAmount = 0;
   verdadeiroAmount = 0;
-  constructor(private sunvoteService: SunvoteServiceService) { 
+  constructor(private sunvoteService: SunvoteServiceService, private socketService:SocketService) { 
 
   }
   
-  ngOnInit(): void {    
+  ngOnInit(): void {
     this.sunvoteService.getVotes().subscribe((votos)=>{
       console.log(votos);
       this.calculaVotacao(votos,true);
     })
+    this.socketService.getVotos().subscribe((votos)=>{
+
+    });
 
   }
   calculaVotacao(votos, resposta) {
