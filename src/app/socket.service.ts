@@ -7,7 +7,7 @@ import * as io from 'socket.io-client';
 export class SocketService {
 
   constructor() { }
-  private url = 'http://localhost';
+  private url = 'http://10.11.1.97';
   private socket;
 
   sendMessage(message) {

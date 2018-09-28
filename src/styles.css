@@ -38,6 +38,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	font-family: Myriad Pro;
 	line-height: 1;
+	background-color: #003642;
 }
 ol, ul {
 	list-style: none;

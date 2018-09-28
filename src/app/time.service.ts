@@ -9,7 +9,7 @@ import { HttpParams } from '@angular/common/http';
 export class TimeService {
   _path;
   constructor(private http: HttpClient) { 
-    this._path="http://localhost/times"
+    this._path="http://10.11.1.97/times"
   }
   get(): Observable<any> {
     return this.http.get(`${this._path}`)
