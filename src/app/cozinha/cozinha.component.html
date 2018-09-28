@@ -1,0 +1,30 @@
+<div class="container-times">
+  <li *ngFor="let time of times" style="list-style: none" (click)="navegaLocal(time)">
+    <div>
+      Keypad {{time.keypad}}
+    </div>
+    <div>
+      Area {{time.area}}
+    </div>
+    <div>
+      Pontos {{time.pontos}}
+    </div>
+  </li>
+</div>
+<div class="container-dinamica">
+  <div class="container-info">
+    <div>Pergunta Atual {{perguntaAtual.id}}</div>
+    <div>resposta {{perguntaAtual.resposta}}</div>
+
+  </div>
+  <div>HOME</div>
+  <div (click)="reset()">Instruções </div>
+  <div (click)="proximaPergunta()">>>></div>
+  <div (click)="mostraPergunta()"> Mostra Pergunta</div>
+  <div> Mostra Votos</div>
+  <div (click)="mostraResposta()"> Mostra Resposta</div>
+</div>
+<div class="container-demo">
+  <div class="perguntaAtual" [ngStyle]="backgroundPergunta"></div>
+  <div class="respostaAtual" [ngStyle]="backgroundResposta"></div>
+</div>

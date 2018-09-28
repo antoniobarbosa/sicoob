@@ -1,14 +1,14 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js'
-import { SunvoteServiceService } from './sunvote-service.service';
+import { SunvoteServiceService } from '../sunvote-service.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-perguntas',
+  templateUrl: './perguntas.component.html',
+  styleUrls: ['./perguntas.component.css']
 })
-
-export class AppComponent implements OnInit {
+export class PerguntasComponent implements OnInit {
   total = 26;
   lineChart = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   verdadeiro = [];
@@ -17,11 +17,10 @@ export class AppComponent implements OnInit {
   verdadeiroSize = '50%';
   falsoAmount = 0;
   verdadeiroAmount = 0;
-
   constructor(private sunvoteService: SunvoteServiceService) { 
 
   }
-
+  
   ngOnInit(): void {    
     this.sunvoteService.getVotes().subscribe((votos)=>{
       console.log(votos);
